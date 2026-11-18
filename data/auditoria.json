@@ -1,5 +1,14 @@
 [
   {
+    "id": "AUD-1300",
+    "timestamp": "2026-11-18 16:32:57",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
     "id": "AUD-1299",
     "timestamp": "2026-11-18 16:30:06",
     "username": "gobernador",
