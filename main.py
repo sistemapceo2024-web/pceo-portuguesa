@@ -39,9 +39,7 @@ from components.theme import (
     COLOR_SURFACE_WHITE,
     COLOR_BORDER,
     COLOR_TEXT_PRIMARY,
-    COLOR_TEXT_SECONDARY,
-    is_dark_mode,
-    set_theme_mode
+    COLOR_TEXT_SECONDARY
 )
 from data.models import ROLE_EDITOR, ROLE_VIEWER
 from data.state import AppState
@@ -104,9 +102,9 @@ def main(page: ft.Page):
     if not hasattr(page, "close"):
         page.close = lambda d=None: page.pop_dialog()
 
-    # Configuración de Ventana y Estética Centro de Comando Ejecutivo (Dark Executive Theme)
+    # Configuración de Ventana y Estética Institucional Profesional
     page.title = "Puesto de Comando Estratégico Operacional - Gobernación de Portuguesa"
-    page.theme_mode = ft.ThemeMode.DARK
+    page.theme_mode = ft.ThemeMode.LIGHT
     page.bgcolor = COLOR_BG_LIGHT
     page.padding = 0
 
@@ -118,10 +116,24 @@ def main(page: ft.Page):
     page.window.min_height = 650
 
     state = AppState()
+    # Inicio limpio obligatorio: sin sesión autenticada previa
+    state.current_user = None
+    state.current_role = "EJECUTIVO"
     current_view_name = "login"
 
-    # Diálogo rápido para alternar roles de prueba desde la barra superior (Exclusivo Master)
+    # Diálogo para alternar roles (Exclusivo para perfil MASTER autenticado)
     def open_quick_role_switcher():
+        if not state.is_authenticated() or not state.is_master():
+            snack = ft.SnackBar(
+                content=ft.Text("Acceso Restringido: Solo el perfil MASTER autenticado puede alternar roles.", color="#FFFFFF"),
+                bgcolor="#DC2626"
+            )
+            if hasattr(page, "open"):
+                page.open(snack)
+            elif hasattr(page, "show_dialog"):
+                page.show_dialog(snack)
+            return
+
         role_radio = ft.RadioGroup(
             content=ft.Column(
                 spacing=8,
@@ -200,26 +212,33 @@ def main(page: ft.Page):
             page.show_dialog(dialog)
         page.update()
 
-    def handle_theme_toggle(is_dark: bool = None):
-        """Manejador central para alternar al instante entre Modo Oscuro Ejecutivo y Modo Claro Institucional."""
-        if is_dark is None:
-            is_dark = not state.is_dark_mode
-        if state.is_dark_mode != is_dark:
-            state.is_dark_mode = is_dark
-            set_theme_mode(is_dark)
-        page.theme_mode = ft.ThemeMode.DARK if is_dark else ft.ThemeMode.LIGHT
-        page.bgcolor = COLOR_BG_LIGHT
-        app_canvas.bgcolor = COLOR_BG_LIGHT
-        render_current_view()
-        page.update()
-
-    # Suscribir manejador a cambios de tema en AppState
-    state.theme_change_listeners.clear()
-    state.theme_change_listeners.append(handle_theme_toggle)
-
     def navigate_to(view_name: str):
         nonlocal current_view_name
-        current_view_name = view_name
+        # Validación estricta de seguridad: sin autenticación válida no se permite acceso a ningún panel
+        if not state.is_authenticated() and view_name != "login":
+            current_view_name = "login"
+            snack = ft.SnackBar(
+                content=ft.Text("Acceso Restringido: Inicie sesión con sus credenciales institucionales.", color="#FFFFFF"),
+                bgcolor="#DC2626"
+            )
+            if hasattr(page, "open"):
+                page.open(snack)
+            elif hasattr(page, "show_dialog"):
+                page.show_dialog(snack)
+        else:
+            # Control de permisos por rol: el módulo de usuarios requiere MASTER
+            if view_name == "usuarios" and not state.is_master():
+                snack = ft.SnackBar(
+                    content=ft.Text("Acceso denegado: El módulo de Gestión de Usuarios requiere perfil MASTER.", color="#FFFFFF"),
+                    bgcolor="#DC2626"
+                )
+                if hasattr(page, "open"):
+                    page.open(snack)
+                elif hasattr(page, "show_dialog"):
+                    page.show_dialog(snack)
+                current_view_name = "executive_summary"
+            else:
+                current_view_name = view_name
         render_current_view()
 
     # Contenedor con AnimatedSwitcher para transiciones y animaciones fluidas instantáneas
@@ -245,7 +264,12 @@ def main(page: ft.Page):
         navigate_to("login")
 
     def render_current_view():
-        view_key = f"{current_view_name}_{'dark' if state.is_dark_mode else 'light'}"
+        nonlocal current_view_name
+        # Guardia permanente: sin sesión validada la única vista permitida es login
+        if not state.is_authenticated():
+            current_view_name = "login"
+
+        view_key = current_view_name
 
         if current_view_name == "login":
             view = build_login_view(
@@ -258,8 +282,7 @@ def main(page: ft.Page):
                 on_open_plan=lambda pid: navigate_to(pid),
                 on_switch_role=open_quick_role_switcher,
                 on_logout=handle_logout,
-                on_open_users=lambda e=None: navigate_to("usuarios"),
-                on_theme_toggle=handle_theme_toggle
+                on_open_users=lambda e=None: navigate_to("usuarios")
             )
         elif current_view_name in PLAN_VIEW_MAP:
             view = PLAN_VIEW_MAP[current_view_name](

@@ -17,9 +17,7 @@ from components.theme import (
     COLOR_TEXT_SECONDARY,
     COLOR_TEXT_MUTED,
     COLOR_STATUS_RED,
-    COLOR_STATUS_GREEN,
-    create_theme_toggle_switch,
-    is_dark_mode
+    COLOR_STATUS_GREEN
 )
 from data.auth_manager import AuthManager
 from data.state import AppState
@@ -29,7 +27,7 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
     state = AppState()
     auth_mgr = AuthManager()
 
-    # Campos de Entrada Limpios con adaptación dinámica bimodal
+    # Campos de Entrada Oficiales
     username_field = ft.TextField(
         label="Usuario Institucional",
         hint_text="ej: master1, analista1, gobernador",
@@ -38,9 +36,9 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
         text_size=13,
         autofocus=True,
         border_color=COLOR_BORDER,
-        color="#FFFFFF" if is_dark_mode() else COLOR_TEXT_PRIMARY,
-        label_style=ft.TextStyle(color="#94A3B8" if is_dark_mode() else COLOR_TEXT_MUTED),
-        bgcolor="#0B1528" if is_dark_mode() else "#F8FAFC"
+        color=COLOR_TEXT_PRIMARY,
+        label_style=ft.TextStyle(color=COLOR_TEXT_MUTED),
+        bgcolor="#F8FAFC"
     )
 
     password_field = ft.TextField(
@@ -52,9 +50,9 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
         border_radius=10,
         text_size=13,
         border_color=COLOR_BORDER,
-        color="#FFFFFF" if is_dark_mode() else COLOR_TEXT_PRIMARY,
-        label_style=ft.TextStyle(color="#94A3B8" if is_dark_mode() else COLOR_TEXT_MUTED),
-        bgcolor="#0B1528" if is_dark_mode() else "#F8FAFC"
+        color=COLOR_TEXT_PRIMARY,
+        label_style=ft.TextStyle(color=COLOR_TEXT_MUTED),
+        bgcolor="#F8FAFC"
     )
 
     # Contenedor de Error Dinámico (Rojo claro institucional)
@@ -80,17 +78,39 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
     )
 
     def do_login(e=None):
-        uname = username_field.value
-        pwd = password_field.value
+        uname = (username_field.value or "").strip()
+        pwd = (password_field.value or "").strip()
+
+        if not uname or not pwd:
+            error_text.value = "Por favor ingrese su usuario institucional y contraseña."
+            error_container.visible = True
+            page.update()
+            return
 
         success, user, msg = auth_mgr.authenticate(uname, pwd)
 
         if success and user:
+            # Validar cuenta activa
+            if not user.get("activo", True):
+                error_text.value = "Cuenta desactivada por la Coordinación Master. Contacte al administrador."
+                error_container.visible = True
+                page.update()
+                return
+
+            # Validar perfil y permisos institucionales
+            user_role = (user.get("rol") or "").upper()
+            if user_role not in ["MASTER", "ANALISTA", "EJECUTIVO"]:
+                error_text.value = f"Perfil de usuario '{user_role}' no autorizado en el sistema."
+                error_container.visible = True
+                page.update()
+                return
+
             error_container.visible = False
+            password_field.value = ""
             state.login_user(user)
             on_login_success()
         else:
-            error_text.value = msg
+            error_text.value = msg or "Credenciales inválidas. Verifique su usuario y contraseña."
             error_container.visible = True
             page.update()
 
@@ -98,56 +118,18 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
     username_field.on_submit = do_login
     password_field.on_submit = do_login
 
-    # Helper para autocompletar credenciales de prueba con un clic
-    def quick_fill(uname: str, pwd: str):
-        username_field.value = uname
-        password_field.value = pwd
-        error_container.visible = False
-        page.update()
-
-    quick_access_chips = ft.Container(
-        content=ft.Column(
+    # Insignia de Seguridad Institucional
+    security_badge = ft.Container(
+        content=ft.Row(
+            alignment=ft.MainAxisAlignment.CENTER,
             spacing=6,
-            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             controls=[
+                ft.Icon(ft.Icons.LOCK_OUTLINE_ROUNDED, size=13, color=COLOR_TEXT_MUTED),
                 ft.Text(
-                    "Accesos Rápidos de Prueba:",
-                    size=11,
+                    "Autenticación Segura SHA-256 • Acceso Oficial PCEO",
+                    size=10.5,
                     weight=ft.FontWeight.W_500,
                     color=COLOR_TEXT_MUTED
-                ),
-                ft.Row(
-                    alignment=ft.MainAxisAlignment.CENTER,
-                    spacing=6,
-                    controls=[
-                        ft.OutlinedButton(
-                            content=ft.Text("Master 1", size=10, weight=ft.FontWeight.BOLD, color=COLOR_ELECTRIC_LIGHT),
-                            style=ft.ButtonStyle(
-                                padding=ft.Padding.symmetric(horizontal=8, vertical=2),
-                                shape=ft.RoundedRectangleBorder(radius=8),
-                                side=ft.BorderSide(1, "#1E3A8A" if is_dark_mode() else "#BFDBFE")
-                            ),
-                            on_click=lambda e: quick_fill("master1", "Pceo2026*")
-                        ),
-                        ft.OutlinedButton(
-                            content=ft.Text("Analista 1", size=10, weight=ft.FontWeight.BOLD, color=COLOR_ELECTRIC_LIGHT),
-                            style=ft.ButtonStyle(
-                                padding=ft.Padding.symmetric(horizontal=8, vertical=2),
-                                shape=ft.RoundedRectangleBorder(radius=8),
-                                side=ft.BorderSide(1, "#1E3A8A" if is_dark_mode() else "#BFDBFE")
-                            ),
-                            on_click=lambda e: quick_fill("analista1", "Sala2026*")
-                        ),
-                        ft.OutlinedButton(
-                            content=ft.Text("Gobernador", size=10, weight=ft.FontWeight.BOLD, color=COLOR_ELECTRIC_LIGHT),
-                            style=ft.ButtonStyle(
-                                padding=ft.Padding.symmetric(horizontal=8, vertical=2),
-                                shape=ft.RoundedRectangleBorder(radius=8),
-                                side=ft.BorderSide(1, "#1E3A8A" if is_dark_mode() else "#BFDBFE")
-                            ),
-                            on_click=lambda e: quick_fill("gobernador", "Portuguesa2026")
-                        ),
-                    ]
                 )
             ]
         ),
@@ -246,8 +228,8 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
                     on_click=do_login
                 ),
 
-                # Atajos rápidos de prueba
-                quick_access_chips,
+                # Insignia de seguridad criptográfica
+                security_badge,
 
                 # Pie Institucional
                 ft.Text(
@@ -266,44 +248,17 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
         shadow=ft.BoxShadow(
             spread_radius=1,
             blur_radius=20,
-            color="#30000000" if is_dark_mode() else "#10000000",
+            color="#15000000",
             offset=ft.Offset(0, 6)
         ),
         width=440
     )
 
-    # Barra superior permanente con interruptor de tema institucional (Sol / Luna)
-    header_bar = ft.Container(
-        content=ft.Row(
-            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-            vertical_alignment=ft.CrossAxisAlignment.CENTER,
-            controls=[
-                ft.Row(
-                    spacing=6,
-                    controls=[
-                        ft.Icon(ft.Icons.SHIELD_ROUNDED, size=18, color=COLOR_ELECTRIC_BLUE),
-                        ft.Text("PCEO PORTUGUESA", size=11, weight=ft.FontWeight.BOLD, color=COLOR_TEXT_MUTED)
-                    ]
-                ),
-                create_theme_toggle_switch(
-                    lambda is_dark: state.set_theme(is_dark),
-                    is_dark=is_dark_mode()
-                )
-            ]
-        ),
-        padding=ft.Padding.symmetric(horizontal=24, vertical=14)
-    )
-
     return ft.Container(
         content=ft.Column(
-            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+            alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            controls=[
-                header_bar,
-                login_card,
-                ft.Container(height=20)
-            ],
-            expand=True
+            controls=[login_card]
         ),
         alignment=ft.Alignment(0, 0),
         expand=True,

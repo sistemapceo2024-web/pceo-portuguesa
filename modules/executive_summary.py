@@ -19,9 +19,7 @@ from components.theme import (
     COLOR_TEXT_MUTED,
     COLOR_STATUS_GREEN,
     COLOR_STATUS_AMBER,
-    COLOR_STATUS_RED,
-    create_theme_toggle_switch,
-    is_dark_mode
+    COLOR_STATUS_RED
 )
 from components.header import create_institutional_header
 from components.kpi_card import create_plan_kpi_card
@@ -52,8 +50,7 @@ def build_executive_summary_view(
     on_open_plan,
     on_switch_role,
     on_logout,
-    on_open_users=None,
-    on_theme_toggle=None
+    on_open_users=None
 ) -> ft.Control:
     """Construye la vista de Resumen Ejecutivo con Menú Lateral Inteligente de Municipios."""
     state = AppState()
@@ -63,8 +60,7 @@ def build_executive_summary_view(
         title="Puesto de Comando Estratégico Operacional del Estado Portuguesa (PCEO)",
         subtitle=None,
         show_back_button=False,
-        show_user_chip=False,
-        on_theme_toggle=on_theme_toggle
+        show_user_chip=False
     )
 
     # -------------------------------------------------------------
@@ -105,7 +101,7 @@ def build_executive_summary_view(
         shadow=ft.BoxShadow(
             spread_radius=0,
             blur_radius=10,
-            color="#30000000",
+            color="#15000000",
             offset=ft.Offset(0, 3)
         )
     )
@@ -554,7 +550,7 @@ def build_executive_summary_view(
                     ]
                 ),
                 padding=ft.Padding.symmetric(horizontal=8, vertical=6),
-                bgcolor="#0B1528" if is_dark_mode() else "#F8FAFC",
+                bgcolor="#F8FAFC",
                 border_radius=8,
                 border=ft.Border.all(1, COLOR_BORDER),
                 expand=True
@@ -788,7 +784,7 @@ def build_executive_summary_view(
                 ),
                 padding=ft.Padding.symmetric(horizontal=12, vertical=10),
                 border_radius=8,
-                bgcolor="#0B1528" if is_dark_mode() else "#F8FAFC",
+                bgcolor="#F8FAFC",
                 border=ft.Border.all(1, COLOR_BORDER)
             )
             table_rows.append(row_control)
@@ -916,9 +912,9 @@ def build_executive_summary_view(
                         ft.Container(
                             content=ft.Icon(ft.Icons.MAP_ROUNDED, size=16, color=COLOR_ELECTRIC_LIGHT),
                             padding=ft.Padding.all(6),
-                            bgcolor="#0B132B" if is_dark_mode() else "#EFF6FF",
+                            bgcolor="#EFF6FF",
                             border_radius=6,
-                            border=ft.Border.all(1, "#1E3A8A" if is_dark_mode() else "#BFDBFE")
+                            border=ft.Border.all(1, "#BFDBFE")
                         ),
                         ft.Column(
                             spacing=1,
@@ -976,7 +972,7 @@ def build_executive_summary_view(
                     ft.Icon(
                         ft.Icons.CHEVRON_RIGHT_ROUNDED,
                         size=14,
-                        color="#FFFFFF" if is_active else (COLOR_TEXT_MUTED if is_dark_mode() else "#94A3B8")
+                        color="#FFFFFF" if is_active else "#94A3B8"
                     )
                 ]
             ),
@@ -1141,7 +1137,7 @@ def build_executive_summary_view(
             ]
         ),
         padding=10,
-        bgcolor="#0B132B" if is_dark_mode() else "#FFFFFF",
+        bgcolor="#FFFFFF",
         border=ft.Border(right=ft.BorderSide(1, COLOR_BORDER))
     )
 
