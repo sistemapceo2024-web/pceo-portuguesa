@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "municipio": "ARAURE",
+    "ubicacion": "VILLA NUEVA",
+    "year": "2022",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "50HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 2,
+    "municipio": "ARAURE",
+    "ubicacion": "SALA DE OPERACIONES",
+    "year": "2022",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "50HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 3,
+    "municipio": "ARAURE",
+    "ubicacion": "VILLA ARAURE 1 SECTOR LA ARBOLEDA",
+    "year": "2024",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "75HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 4,
+    "municipio": "ARAURE",
+    "ubicacion": "LA QUEBRADITA DE BARRIO OBRERO",
+    "year": "2025",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "75HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 5,
+    "municipio": "ARAURE",
+    "ubicacion": "VILLA ARAURE LA PLAZA",
+    "year": "2025",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "SIN EQUIPO",
+    "estatus": "POR INAUGURAR"
+  },
+  {
+    "id": 6,
+    "municipio": "GUANARE",
+    "ubicacion": "CENTRO DE LA CIUDAD",
+    "year": "2022",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "30HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 7,
+    "municipio": "GUANARE",
+    "ubicacion": "SAMAN TUCUPIDO",
+    "year": "2021",
+    "fuente": "MINAGUAS",
+    "equipo_hp": "20HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 8,
+    "municipio": "GUANARE",
+    "ubicacion": "SANTA MARIA",
+    "year": "2023",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "30HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 9,
+    "municipio": "GUANARE",
+    "ubicacion": "SANTA MARIA 2",
+    "year": "2023",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "50HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 10,
+    "municipio": "GUANARE",
+    "ubicacion": "CHE GUEVARA",
+    "year": "2025",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "25HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 11,
+    "municipio": "GUANARE",
+    "ubicacion": "SANTA RITA",
+    "year": "2025",
+    "fuente": "MINAGUAS",
+    "equipo_hp": "10HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 12,
+    "municipio": "PAEZ",
+    "ubicacion": "LISANDRO ALVARADO",
+    "year": "2022",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "30HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 13,
+    "municipio": "PAEZ",
+    "ubicacion": "PARQUE MANO NERIO",
+    "year": "2022",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "25HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 14,
+    "municipio": "PAEZ",
+    "ubicacion": "5 DE DICIEMBRE",
+    "year": "2023",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "50HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 15,
+    "municipio": "PAEZ",
+    "ubicacion": "LAS DELICIAS",
+    "year": "2023",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "60HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 16,
+    "municipio": "PAEZ",
+    "ubicacion": "LA CORTEZA",
+    "year": "2023",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "60HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 17,
+    "municipio": "PAEZ",
+    "ubicacion": "15 DE MARZO",
+    "year": "2023",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "75HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 18,
+    "municipio": "PAEZ",
+    "ubicacion": "SEDE DE RESIDUOS SOLIDOS",
+    "year": "2024",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "60HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 19,
+    "municipio": "SAN GENARO DE BOCONOITO",
+    "ubicacion": "5TA REPUBLICA",
+    "year": "2024",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "15HP",
+    "estatus": "OPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 20,
+    "municipio": "SUCRE",
+    "ubicacion": "LOS ARAGUANEYES",
+    "year": "2024",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "7.5HP",
+    "estatus": "OPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 21,
+    "municipio": "SUCRE",
+    "ubicacion": "LOS POTRERITOS",
+    "year": "2025",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "SIN EQUIPO",
+    "estatus": "INOPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 22,
+    "municipio": "TUREN",
+    "ubicacion": "CHORRERONES",
+    "year": "2024",
+    "fuente": "LA COMUNA",
+    "equipo_hp": "7.5HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 23,
+    "municipio": "TUREN",
+    "ubicacion": "EL GUASDUAL",
+    "year": "2024",
+    "fuente": "LA COMUNA",
+    "equipo_hp": "20HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 24,
+    "municipio": "UNDA",
+    "ubicacion": "LA ALDEA",
+    "year": "2024",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "50HP",
+    "estatus": "OPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 25,
+    "municipio": "OSPINO",
+    "ubicacion": "SANTA LUCIA DEL LLANO",
+    "year": "2025",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "SIN EQUIPO",
+    "estatus": "INOPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 26,
+    "municipio": "PAEZ",
+    "ubicacion": "BARRIO 5 DE ABRIL",
+    "year": "2025",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "75HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 27,
+    "municipio": "GUANARE",
+    "ubicacion": "PASEO DE LOS CACIQUES",
+    "year": "2026",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "25HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 28,
+    "municipio": "PAEZ",
+    "ubicacion": "SABANETICA",
+    "year": "2026",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "30HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 29,
+    "municipio": "PAEZ",
+    "ubicacion": "CAÑO SECO",
+    "year": "2026",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "25HP",
+    "estatus": "OPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 30,
+    "municipio": "PAEZ",
+    "ubicacion": "URB GONZALO BARRIOS",
+    "year": "2026",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "SIN EQUIPO",
+    "estatus": "EN EJECUCION"
+  },
+  {
+    "id": 31,
+    "municipio": "AGUA BLANCA",
+    "ubicacion": "PIRITAL",
+    "year": "2026",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "30HP",
+    "estatus": "OPERATIVA"
+  },
+  {
+    "id": 32,
+    "municipio": "PAEZ",
+    "ubicacion": "BELLAS ARTES",
+    "year": "2026",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "SIN EQUIPO",
+    "estatus": "EN EJECUCION"
+  },
+  {
+    "id": 33,
+    "municipio": "PAEZ",
+    "ubicacion": "CASERIO ESPINITAL",
+    "year": "2026",
+    "fuente": "ALCALDIA",
+    "equipo_hp": "25HP",
+    "estatus": "OPERATIVA POR INAUGURAR"
+  },
+  {
+    "id": 34,
+    "municipio": "SAN RAFAEL DE ONOTO",
+    "ubicacion": "SECTOR BARRIO AJURO",
+    "year": "2026",
+    "fuente": "GOBERNACION",
+    "equipo_hp": "SIN EQUIPO",
+    "estatus": "PARALIZADO"
+  }
+]

@@ -1,0 +1,218 @@
+"""
+Conjunto Integral de Datos del Plan 'Fiesta del Agua'
+Gobernación del Estado Portuguesa - Secretaría Superior de Operaciones Generales
+"""
+from typing import List, Dict
+from data.models import WellRecord, FacilityRecord, DrillingProject
+
+MUNICIPALITIES_LIST = [
+    "Todos los Municipios",
+    "Guanare",
+    "Araure",
+    "Páez",
+    "Turén",
+    "Esteller",
+    "Ospino",
+    "Sucre",
+    "Unda",
+    "Guanarito",
+    "Papelón",
+    "San Genaro de Boconoíto",
+    "San Rafael de Onoto",
+    "Santa Rosalía",
+    "Agua Blanca",
+]
+
+# Resumen Estadístico Oficial de los 535 Pozos (463 Operativos / 72 Inoperativos)
+MUNICIPALITY_STATS: Dict[str, Dict[str, int]] = {
+    "Guanare": {"total": 96, "operativos": 84, "inoperativos": 12, "poblacion": 240000},
+    "Páez": {"total": 82, "operativos": 72, "inoperativos": 10, "poblacion": 210000},
+    "Araure": {"total": 68, "operativos": 60, "inoperativos": 8, "poblacion": 175000},
+    "Turén": {"total": 46, "operativos": 40, "inoperativos": 6, "poblacion": 78000},
+    "Esteller": {"total": 38, "operativos": 33, "inoperativos": 5, "poblacion": 52000},
+    "Ospino": {"total": 35, "operativos": 30, "inoperativos": 5, "poblacion": 68000},
+    "Sucre": {"total": 28, "operativos": 24, "inoperativos": 4, "poblacion": 46000},
+    "Unda": {"total": 24, "operativos": 21, "inoperativos": 3, "poblacion": 34000},
+    "Guanarito": {"total": 29, "operativos": 24, "inoperativos": 5, "poblacion": 45000},
+    "Papelón": {"total": 22, "operativos": 19, "inoperativos": 3, "poblacion": 23000},
+    "San Genaro de Boconoíto": {"total": 25, "operativos": 21, "inoperativos": 4, "poblacion": 31000},
+    "San Rafael de Onoto": {"total": 16, "operativos": 13, "inoperativos": 3, "poblacion": 22000},
+    "Santa Rosalía": {"total": 18, "operativos": 15, "inoperativos": 3, "poblacion": 21000},
+    "Agua Blanca": {"total": 8, "operativos": 7, "inoperativos": 1, "poblacion": 25000},
+}
+
+# Plantas Potabilizadoras Oficiales (2 Operativas / 1 Inoperativa)
+PLANTS_DATA: List[FacilityRecord] = [
+    FacilityRecord(
+        id="PLANT-001",
+        name="Planta Potabilizadora Camburito",
+        facility_type="Planta Potabilizadora",
+        municipality="Araure",
+        location="Sector Camburito, Límites Araure-Acarigua",
+        status="Operativo",
+        capacity_lps=1250.0,
+        pumps_operating=4,
+        pumps_total=4,
+        failure_reason=None,
+        action_plan="Operatividad al 100%. Abastece a las ciudades gemelas Acarigua-Araure."
+    ),
+    FacilityRecord(
+        id="PLANT-002",
+        name="Planta Potabilizadora Virgen de Coromoto",
+        facility_type="Planta Potabilizadora",
+        municipality="Guanare",
+        location="Embalse La Coromoto / Tucupido, Guanare",
+        status="Operativo",
+        capacity_lps=850.0,
+        pumps_operating=3,
+        pumps_total=3,
+        failure_reason=None,
+        action_plan="Operación estable con tratamiento químico continuo y floculadores activos."
+    ),
+    FacilityRecord(
+        id="PLANT-003",
+        name="Planta Potabilizadora Boconoíto",
+        facility_type="Planta Potabilizadora",
+        municipality="San Genaro de Boconoíto",
+        location="Sector Puente Río Boconoíto",
+        status="Inoperativo",
+        capacity_lps=160.0,
+        pumps_operating=0,
+        pumps_total=2,
+        failure_reason="Falla mayor en motores de captación por sobretensión y sedimentación.",
+        action_plan="Plan de contingencia: Suministro por camiones cisterna y sustitución de motores 75 HP (Avance 60%)."
+    ),
+]
+
+# Estaciones de Rebombeo (24 Operativas / 3 Inoperativas = 27 Total)
+PUMPING_STATIONS_DATA: List[FacilityRecord] = [
+    FacilityRecord("REB-001", "Estación Rebombeo Camburito Principal", "Estación de Rebombeo", "Araure", "Distribuidor Camburito", "Operativo", 450.0, 3, 3),
+    FacilityRecord("REB-002", "Estación Rebombeo Curpa", "Estación de Rebombeo", "Páez", "Sector Curpa / Vía Los Cortijos", "Operativo", 320.0, 2, 2),
+    FacilityRecord("REB-003", "Estación Rebombeo La Goajira", "Estación de Rebombeo", "Páez", "Av. 13 de Junio, Acarigua", "Operativo", 280.0, 2, 2),
+    FacilityRecord("REB-004", "Estación Rebombeo Tricentenaria", "Estación de Rebombeo", "Guanare", "Zona Industrial Guanare", "Operativo", 390.0, 3, 3),
+    FacilityRecord("REB-005", "Estación Rebombeo La Colonia", "Estación de Rebombeo", "Guanare", "Sector Mesa de Cavacas", "Operativo", 240.0, 2, 2),
+    FacilityRecord("REB-006", "Estación Rebombeo Mijagüito", "Estación de Rebombeo", "Páez", "Carretera Nacional Mijagüito", "Operativo", 210.0, 2, 2),
+    FacilityRecord("REB-007", "Estación Rebombeo Villa Pastora", "Estación de Rebombeo", "Guanare", "Corredor Sur Guanare", "Operativo", 190.0, 2, 2),
+    FacilityRecord("REB-008", "Estación Rebombeo Las Mesetas", "Estación de Rebombeo", "Araure", "Urb. Las Mesetas", "Operativo", 180.0, 2, 2),
+    FacilityRecord("REB-009", "Estación Rebombeo 23 de Enero", "Estación de Rebombeo", "Guanare", "Barrio 23 de Enero", "Operativo", 175.0, 2, 2),
+    FacilityRecord("REB-010", "Estación Rebombeo Bellas Artes", "Estación de Rebombeo", "Páez", "Av. Las Lágrimas, Acarigua", "Operativo", 260.0, 2, 2),
+    FacilityRecord("REB-011", "Estación Rebombeo San José de la Montaña", "Estación de Rebombeo", "Turén", "Sector La Misión, Turén", "Operativo", 160.0, 2, 2),
+    FacilityRecord("REB-012", "Estación Rebombeo Villa Bruzual", "Estación de Rebombeo", "Turén", "Av. Principal Villa Bruzual", "Operativo", 185.0, 2, 2),
+    FacilityRecord("REB-013", "Estación Rebombeo Píritu Norte", "Estación de Rebombeo", "Esteller", "Entrada Píritu", "Operativo", 150.0, 2, 2),
+    FacilityRecord("REB-014", "Estación Rebombeo Uveral", "Estación de Rebombeo", "Esteller", "Sector Uveral", "Operativo", 140.0, 2, 2),
+    FacilityRecord("REB-015", "Estación Rebombeo Ospino Centro", "Estación de Rebombeo", "Ospino", "Calle Real Ospino", "Operativo", 195.0, 2, 2),
+    FacilityRecord("REB-016", "Estación Rebombeo La Estación", "Estación de Rebombeo", "Ospino", "Sector La Estación", "Operativo", 130.0, 1, 1),
+    FacilityRecord("REB-017", "Estación Rebombeo Biscucuy Central", "Estación de Rebombeo", "Sucre", "Biscucuy Sector La Vega", "Operativo", 170.0, 2, 2),
+    FacilityRecord("REB-018", "Estación Rebombeo Chabasquén Alto", "Estación de Rebombeo", "Unda", "Chabasquén El Progreso", "Operativo", 125.0, 2, 2),
+    FacilityRecord("REB-019", "Estación Rebombeo Guanarito Casco", "Estación de Rebombeo", "Guanarito", "Av. 3 Guanarito", "Operativo", 165.0, 2, 2),
+    FacilityRecord("REB-020", "Estación Rebombeo Papelón Rural", "Estación de Rebombeo", "Papelón", "Carretera Guanare-Papelón", "Operativo", 140.0, 2, 2),
+    FacilityRecord("REB-021", "Estación Rebombeo Boconoíto Río", "Estación de Rebombeo", "San Genaro de Boconoíto", "Sector Caño Seco", "Operativo", 155.0, 2, 2),
+    FacilityRecord("REB-022", "Estación Rebombeo San Rafael Este", "Estación de Rebombeo", "San Rafael de Onoto", "Sector El Morro", "Operativo", 110.0, 1, 1),
+    FacilityRecord("REB-023", "Estación Rebombeo Santa Rosalía Centro", "Estación de Rebombeo", "Santa Rosalía", "El Playón Centro", "Operativo", 135.0, 2, 2),
+    FacilityRecord("REB-024", "Estación Rebombeo Agua Blanca Industrial", "Estación de Rebombeo", "Agua Blanca", "Zona Agroindustrial Agua Blanca", "Operativo", 145.0, 2, 2),
+    # 3 Inoperativas
+    FacilityRecord(
+        id="REB-025",
+        name="Estación Rebombeo Morador",
+        facility_type="Estación de Rebombeo",
+        municipality="Ospino",
+        location="Sector Morador, Vía Troncal 05",
+        status="Inoperativo",
+        capacity_lps=120.0,
+        pumps_operating=0,
+        pumps_total=2,
+        failure_reason="Daño severo en bobina de motor eléctrico de 125 HP tras tormenta.",
+        action_plan="Motor en taller central Hidrosportuguesa. Montaje previsto en 48 horas."
+    ),
+    FacilityRecord(
+        id="REB-026",
+        name="Estación Rebombeo San Rafael Casco",
+        facility_type="Estación de Rebombeo",
+        municipality="San Rafael de Onoto",
+        location="Av. Sucre, San Rafael de Onoto",
+        status="Inoperativo",
+        capacity_lps=95.0,
+        pumps_operating=0,
+        pumps_total=2,
+        failure_reason="Tablero arrancador suave quemado y contactores deteriorados.",
+        action_plan="Tablero nuevo asignado por Gobernación. Cuadrilla en sitio instalando componentes."
+    ),
+    FacilityRecord(
+        id="REB-027",
+        name="Estación Rebombeo El Playón",
+        facility_type="Estación de Rebombeo",
+        municipality="Santa Rosalía",
+        location="Sector El Playón, Santa Rosalía",
+        status="Inoperativo",
+        capacity_lps=110.0,
+        pumps_operating=0,
+        pumps_total=2,
+        failure_reason="Fisura mecánica en eje de impulsión de bomba centrífuga principal.",
+        action_plan="Sustitución de eje y rodamientos SKF en curso por el equipo técnico."
+    ),
+]
+
+# Las 34 Nuevas Perforaciones de Pozos Profundos (Detalladas una por una)
+DRILLING_PROJECTS_DATA: List[DrillingProject] = [
+    DrillingProject("PERF-01", "P-301", "Pozo Profundo Los Cortijos", "Guanare", "Sector Los Cortijos", "Ejecutado / Inaugurado", 100, 32.0, 115.0, "Consorcio Hídrico Los Llanos", "Inaugurado"),
+    DrillingProject("PERF-02", "P-302", "Pozo Profundo Villa del Sol", "Guanare", "Urb. Villa del Sol", "Ejecutado / Inaugurado", 100, 28.5, 110.0, "Drilling Portuguesa C.A.", "Inaugurado"),
+    DrillingProject("PERF-03", "P-303", "Pozo Profundo San José de las Lomas", "Guanare", "Comunidad Las Lomas", "En Perforación", 75, 25.0, 120.0, "Consorcio Hídrico Los Llanos", "15 Nov 2026"),
+    DrillingProject("PERF-04", "P-304", "Pozo Profundo Mesa de Cavacas II", "Guanare", "Mesa de Cavacas", "Equipamiento Eléctrico", 90, 35.0, 130.0, "HidroSuministros del Centro", "20 Nov 2026"),
+    DrillingProject("PERF-05", "P-305", "Pozo Profundo 24 de Julio", "Páez", "Urb. 24 de Julio, Acarigua", "Ejecutado / Inaugurado", 100, 42.0, 125.0, "Perforaciones Llaneras", "Inaugurado"),
+    DrillingProject("PERF-06", "P-306", "Pozo Profundo La Goajira II", "Páez", "Sector La Goajira", "Ejecutado / Inaugurado", 100, 38.0, 120.0, "Perforaciones Llaneras", "Inaugurado"),
+    DrillingProject("PERF-07", "P-307", "Pozo Profundo Durigua IV", "Páez", "Sector Durigua Sector 4", "En Perforación", 65, 30.0, 118.0, "Consorcio Pozo Profundo", "28 Nov 2026"),
+    DrillingProject("PERF-08", "P-308", "Pozo Profundo Baraure Central", "Araure", "Urb. Baraure I", "Ejecutado / Inaugurado", 100, 45.0, 135.0, "TecnoAguas Portuguesa", "Inaugurado"),
+    DrillingProject("PERF-09", "P-309", "Pozo Profundo Villa Araure V", "Araure", "Sector 5 Villa Araure", "Equipamiento Eléctrico", 85, 36.0, 128.0, "TecnoAguas Portuguesa", "18 Nov 2026"),
+    DrillingProject("PERF-10", "P-310", "Pozo Profundo El Rodeo", "Araure", "Caserío El Rodeo", "En Perforación", 55, 26.0, 110.0, "Perforaciones Llaneras", "05 Dic 2026"),
+    DrillingProject("PERF-11", "P-311", "Pozo Profundo Colonia Turén", "Turén", "Sector Campo Lindo", "Ejecutado / Inaugurado", 100, 40.0, 105.0, "Drilling Portuguesa C.A.", "Inaugurado"),
+    DrillingProject("PERF-12", "P-312", "Pozo Profundo San José de Bruzual", "Turén", "Bruzual Sur", "En Perforación", 70, 34.0, 112.0, "Drilling Portuguesa C.A.", "25 Nov 2026"),
+    DrillingProject("PERF-13", "P-313", "Pozo Profundo La Misión II", "Turén", "La Misión", "Equipamiento Eléctrico", 88, 29.0, 108.0, "Consorcio Hídrico Los Llanos", "22 Nov 2026"),
+    DrillingProject("PERF-14", "P-314", "Pozo Profundo Píritu Casco", "Esteller", "Calle Miranda, Píritu", "Ejecutado / Inaugurado", 100, 33.0, 115.0, "Consorcio Hidráulico", "Inaugurado"),
+    DrillingProject("PERF-15", "P-315", "Pozo Profundo Banco Obrero", "Esteller", "Urb. Banco Obrero", "En Perforación", 60, 27.0, 110.0, "Consorcio Hidráulico", "02 Dic 2026"),
+    DrillingProject("PERF-16", "P-316", "Pozo Profundo La Aparición", "Ospino", "La Aparición de Ospino", "Ejecutado / Inaugurado", 100, 35.0, 125.0, "TecnoAguas Portuguesa", "Inaugurado"),
+    DrillingProject("PERF-17", "P-317", "Pozo Profundo El Morador II", "Ospino", "Caserío El Morador", "En Perforación", 80, 28.0, 118.0, "TecnoAguas Portuguesa", "20 Nov 2026"),
+    DrillingProject("PERF-18", "P-318", "Pozo Profundo La Vega Biscucuy", "Sucre", "Biscucuy La Vega", "Ejecutado / Inaugurado", 100, 22.0, 95.0, "Andes Hídricos C.A.", "Inaugurado"),
+    DrillingProject("PERF-19", "P-319", "Pozo Profundo San Antonio", "Sucre", "Caserío San Antonio", "En Perforación", 50, 18.0, 92.0, "Andes Hídricos C.A.", "10 Dic 2026"),
+    DrillingProject("PERF-20", "P-320", "Pozo Profundo Chabasquén Centro", "Unda", "Chabasquén Central", "Ejecutado / Inaugurado", 100, 24.0, 98.0, "Andes Hídricos C.A.", "Inaugurado"),
+    DrillingProject("PERF-21", "P-321", "Pozo Profundo El Peñón", "Unda", "Sector El Peñón", "Equipamiento Eléctrico", 92, 20.0, 94.0, "Andes Hídricos C.A.", "17 Nov 2026"),
+    DrillingProject("PERF-22", "P-322", "Pozo Profundo Guanarito Sur", "Guanarito", "Barrio El Río, Guanarito", "Ejecutado / Inaugurado", 100, 36.0, 115.0, "Drilling Portuguesa C.A.", "Inaugurado"),
+    DrillingProject("PERF-23", "P-323", "Pozo Profundo Las Guafillas", "Guanarito", "Las Guafillas", "En Perforación", 68, 29.0, 110.0, "Drilling Portuguesa C.A.", "29 Nov 2026"),
+    DrillingProject("PERF-24", "P-324", "Pozo Profundo Papelón Pueblo", "Papelón", "Calle Comercio, Papelón", "Ejecutado / Inaugurado", 100, 31.0, 108.0, "Consorcio Hídrico Los Llanos", "Inaugurado"),
+    DrillingProject("PERF-25", "P-325", "Pozo Profundo Corozo Largo", "Papelón", "Sector Corozo Largo", "En Perforación", 58, 25.0, 104.0, "Consorcio Hídrico Los Llanos", "06 Dic 2026"),
+    DrillingProject("PERF-26", "P-326", "Pozo Profundo Boconoíto Estación", "San Genaro de Boconoíto", "Boconoíto Estación", "Ejecutado / Inaugurado", 100, 33.0, 112.0, "TecnoAguas Portuguesa", "Inaugurado"),
+    DrillingProject("PERF-27", "P-327", "Pozo Profundo Antolín", "San Genaro de Boconoíto", "Sector Antolín", "Equipamiento Eléctrico", 85, 27.0, 106.0, "TecnoAguas Portuguesa", "21 Nov 2026"),
+    DrillingProject("PERF-28", "P-328", "Pozo Profundo San Rafael Central", "San Rafael de Onoto", "San Rafael Casco", "Ejecutado / Inaugurado", 100, 30.0, 102.0, "Perforaciones Llaneras", "Inaugurado"),
+    DrillingProject("PERF-29", "P-329", "Pozo Profundo El Morro II", "San Rafael de Onoto", "Caserío El Morro", "En Perforación", 62, 24.0, 98.0, "Perforaciones Llaneras", "04 Dic 2026"),
+    DrillingProject("PERF-30", "P-330", "Pozo Profundo El Playón Norte", "Santa Rosalía", "El Playón Norte", "Ejecutado / Inaugurado", 100, 35.0, 108.0, "Drilling Portuguesa C.A.", "Inaugurado"),
+    DrillingProject("PERF-31", "P-331", "Pozo Profundo Matapalo", "Santa Rosalía", "Caserío Matapalo", "En Perforación", 72, 28.0, 105.0, "Drilling Portuguesa C.A.", "27 Nov 2026"),
+    DrillingProject("PERF-32", "P-332", "Pozo Profundo Agua Blanca Centro", "Agua Blanca", "Av. Bolívar, Agua Blanca", "Ejecutado / Inaugurado", 100, 34.0, 110.0, "TecnoAguas Portuguesa", "Inaugurado"),
+    DrillingProject("PERF-33", "P-333", "Pozo Profundo Los Hijitos", "Agua Blanca", "Sector Los Hijitos", "Equipamiento Eléctrico", 89, 29.0, 106.0, "TecnoAguas Portuguesa", "19 Nov 2026"),
+    DrillingProject("PERF-34", "P-334", "Pozo Profundo La Quebradita", "Guanare", "Corredor La Quebradita", "En Perforación", 64, 30.0, 115.0, "Consorcio Hídrico Los Llanos", "30 Nov 2026"),
+]
+
+# Muestra representativa de pozos individuales para monitoreo y edición técnica directa
+SAMPLE_WELLS_DATA: List[WellRecord] = [
+    WellRecord("W-GUA-01", "PZ-GUA-01", "Pozo Los Próceres I", "Guanare", "San Juan Guanaguanare", "Urb. Los Próceres", "Operativo", 35.0, 120.0, 60, 4200, "10/11/2026", "Presión en boca: 42 PSI. Consumo estable."),
+    WellRecord("W-GUA-02", "PZ-GUA-02", "Pozo La Enrramada", "Guanare", "Guanare Casco", "Sector La Enrramada", "Operativo", 28.0, 115.0, 50, 3100, "08/11/2026", "Mantenimiento preventivo de contactores efectuado."),
+    WellRecord("W-GUA-03", "PZ-GUA-03", "Pozo Barrio El Cambio", "Guanare", "Guanare Casco", "Sector El Cambio", "Inoperativo", 0.0, 110.0, 40, 2800, "05/11/2026", "Motor quemado por descarga eléctrica en tormenta."),
+    WellRecord("W-GUA-04", "PZ-GUA-04", "Pozo Juan Pablo II Bloque 3", "Guanare", "San Juan Guanaguanare", "Urb. Juan Pablo II", "En Mantenimiento", 15.0, 130.0, 75, 6500, "11/11/2026", "Aforo y limpieza con compresor de aire."),
+    WellRecord("W-GUA-05", "PZ-GUA-05", "Pozo Cuatricentenaria", "Guanare", "Guanare Casco", "Urb. Cuatricentenaria", "Operativo", 38.0, 125.0, 60, 5200, "09/11/2026", "Bomba sumergible Franklin 60HP operando normal."),
+    WellRecord("W-PAE-01", "PZ-PAE-01", "Pozo Los Cortijos Acarigua", "Páez", "Acarigua", "Sector Los Cortijos", "Operativo", 42.0, 128.0, 75, 5900, "11/11/2026", "Suministro óptimo a red secundaria."),
+    WellRecord("W-PAE-02", "PZ-PAE-02", "Pozo Bella Vista", "Páez", "Acarigua", "Barrio Bella Vista", "Operativo", 36.0, 120.0, 50, 4100, "07/11/2026", "Amperaje dentro de norma nominal."),
+    WellRecord("W-PAE-03", "PZ-PAE-03", "Pozo Payara Central", "Páez", "Payara", "Casco Central Payara", "Inoperativo", 0.0, 105.0, 40, 2400, "04/11/2026", "Colapso mecánico en columna de impulsión."),
+    WellRecord("W-ARA-01", "PZ-ARA-01", "Pozo Las Palmas", "Araure", "Araure Casco", "Urb. Las Palmas", "Operativo", 40.0, 130.0, 60, 4800, "10/11/2026", "Chequeo de tablero de control automatizado OK."),
+    WellRecord("W-ARA-02", "PZ-ARA-02", "Pozo San Rafael de Palo Alzado", "Araure", "Río Acarigua", "Palo Alzado", "Inoperativo", 0.0, 112.0, 50, 1900, "06/11/2026", "Falta transformador de 25kVA por vandalismo."),
+    WellRecord("W-TUR-01", "PZ-TUR-01", "Pozo La Colonia Agrícola 1", "Turén", "Villa Bruzual", "Colonia Turén", "Operativo", 44.0, 108.0, 75, 5300, "09/11/2026", "Caudal abundante y excelente pureza fisicoquímica."),
+    WellRecord("W-TUR-02", "PZ-TUR-02", "Pozo El Cementerio Turén", "Turén", "Villa Bruzual", "Sector Cementerio", "Inoperativo", 0.0, 102.0, 40, 2100, "03/11/2026", "Turbina obstruida con arena gruesa."),
+    WellRecord("W-EST-01", "PZ-EST-01", "Pozo Píritu Norte 2", "Esteller", "Píritu", "Calle Comercio", "Operativo", 32.0, 114.0, 50, 3600, "08/11/2026", "Operando 24 horas continuas."),
+    WellRecord("W-OSP-01", "PZ-OSP-01", "Pozo La Estación Ospino", "Ospino", "La Estación", "Barrio Bolívar", "Operativo", 30.0, 116.0, 50, 3200, "09/11/2026", "Revisión mensual completada satisfactoriamente."),
+    WellRecord("W-SUC-01", "PZ-SUC-01", "Pozo Biscucuy Centro", "Sucre", "Biscucuy", "Av. Bolívar", "Operativo", 24.0, 92.0, 40, 2700, "06/11/2026", "Mantenimiento preventivo al clorador."),
+    WellRecord("W-UND-01", "PZ-UND-01", "Pozo Chabasquén Alto", "Unda", "Chabasquén", "Barrio El Progreso", "Operativo", 22.0, 96.0, 30, 2100, "07/11/2026", "Reemplazo de manómetro de presión."),
+    WellRecord("W-GTO-01", "PZ-GTO-01", "Pozo Guanarito Casco", "Guanarito", "Guanarito", "Sector Las Flores", "Operativo", 34.0, 110.0, 50, 3500, "08/11/2026", "Revisión de voltajes trifásicos."),
+    WellRecord("W-PAP-01", "PZ-PAP-01", "Pozo Papelón Entrada", "Papelón", "Papelón", "Sector Caño Amarillo", "Operativo", 26.0, 105.0, 40, 2200, "05/11/2026", "Caudal constante de 26 LPS."),
+    WellRecord("W-BOC-01", "PZ-BOC-01", "Pozo Boconoíto Centro", "San Genaro de Boconoíto", "Boconoíto", "Av. Principal", "Operativo", 31.0, 110.0, 50, 3300, "10/11/2026", "Equipo electromecánico verificado."),
+    WellRecord("W-SRO-01", "PZ-SRO-01", "Pozo San Rafael Casco", "San Rafael de Onoto", "San Rafael", "Sector Plaza Bolívar", "Operativo", 25.0, 100.0, 40, 2400, "04/11/2026", "Funcionamiento continuo."),
+    WellRecord("W-SRO-02", "PZ-SRO-02", "Pozo El Morro", "San Rafael de Onoto", "San Rafael", "Caserío El Morro", "Inoperativo", 0.0, 95.0, 30, 1200, "02/11/2026", "Bomba sumergible en banco de prueba."),
+    WellRecord("W-STR-01", "PZ-STR-01", "Pozo El Playón", "Santa Rosalía", "El Playón", "Barrio La Florida", "Operativo", 29.0, 106.0, 40, 2600, "07/11/2026", "Limpieza de válvula check."),
+    WellRecord("W-AB-01", "PZ-AB-01", "Pozo Agua Blanca Pueblo", "Agua Blanca", "Agua Blanca", "Sector Los Olivos", "Operativo", 32.0, 108.0, 50, 3400, "09/11/2026", "Excelente presión en red de acueducto."),
+]

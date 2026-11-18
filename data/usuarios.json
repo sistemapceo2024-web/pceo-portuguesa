@@ -1,0 +1,92 @@
+[
+  {
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "password_hash": "fa9d42857dd6e14719db0f651fa037c8e392efb87f56bc8df929503ddd905cba",
+    "rol": "MASTER",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-18 14:38:39"
+  },
+  {
+    "username": "master2",
+    "nombre": "Abner Lemus - CO - EDITOR",
+    "password_hash": "a3a2efdea2db8733ad5a6765473b420389791937bda2f464d1e67d3bfaf92826",
+    "rol": "MASTER",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-12 18:30:00"
+  },
+  {
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "password_hash": "04b869fc27d4b361deaa16dcc8d9a19ba26276dd9bc9f191db7b40b5250e05c5",
+    "rol": "ANALISTA",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-18 14:31:15"
+  },
+  {
+    "username": "analista2",
+    "nombre": "Dayrelis Morillo - Analista de Sala",
+    "password_hash": "fe07a6d15d6630133a09014afa6c4c23f5fccde996be64caaaa3f837f24b4283",
+    "rol": "ANALISTA",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-12 19:40:00"
+  },
+  {
+    "username": "analista3",
+    "nombre": "Rosa León - Analista de Sala",
+    "password_hash": "ec0f9dd9c4797551f4cee6a6573966db5c6b04f5367e0560fe80750f012ef0f9",
+    "rol": "ANALISTA",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-17 17:05:30"
+  },
+  {
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "password_hash": "95f755140ae693be318bfbd7ab7b5dc36b40c1f2d45a4df64958fd2f938c661f",
+    "rol": "EJECUTIVO",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-18 14:31:15"
+  },
+  {
+    "username": "jefepceo",
+    "nombre": "Jefe del Puesto de Comando - Carlos Peña",
+    "password_hash": "ded23b95144f86d13eac750893e26d6a60cb509a56a9593038e167ecd3d24354",
+    "rol": "EJECUTIVO",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-12 20:05:00"
+  },
+  {
+    "username": "asistente1",
+    "nombre": "Asistente Alexandra López",
+    "password_hash": "eaef793e0c6dd70a0257df04d12d797bbd70e0e3d3f63fc58c896da3ba25e5e3",
+    "rol": "EJECUTIVO",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-12 14:30:00"
+  },
+  {
+    "username": "asistente2",
+    "nombre": "Asistente Bernal",
+    "password_hash": "b976100f118de1326722cae9a0273de2f973ab50e9855a71c23870b9c3d9899e",
+    "rol": "EJECUTIVO",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-11 17:00:00"
+  },
+  {
+    "username": "asistente3",
+    "nombre": "Asistente Andrés",
+    "password_hash": "e57488324ab0d08b0ff4aee7b2193a914949514723c5ed7f43d63804c9ddeb87",
+    "rol": "EJECUTIVO",
+    "activo": true,
+    "fecha_creacion": "2026-11-12 08:00:00",
+    "ultimo_acceso": "2026-11-10 11:45:00"
+  }
+]
