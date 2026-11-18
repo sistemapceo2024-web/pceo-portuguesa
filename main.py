@@ -119,6 +119,7 @@ def main(page: ft.Page):
     # Inicio limpio obligatorio: sin sesión autenticada previa
     state.current_user = None
     state.current_role = "EJECUTIVO"
+    state.is_authenticated = False
     current_view_name = "login"
 
     # Diálogo para alternar roles (Exclusivo para perfil MASTER autenticado)
@@ -261,6 +262,7 @@ def main(page: ft.Page):
 
     def handle_logout():
         state.logout_user()
+        state.is_authenticated = False
         navigate_to("login")
 
     def render_current_view():

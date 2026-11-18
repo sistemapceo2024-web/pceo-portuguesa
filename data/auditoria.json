@@ -1,5 +1,1004 @@
 [
   {
+    "id": "AUD-1299",
+    "timestamp": "2026-11-18 16:30:06",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "PLAN_CANALIZACION",
+    "accion": "REGISTRO_OBRA_CANALIZACION",
+    "detalle": "Obra: CANALIZACIÓN QUEBRADA TEST (Guanare) - EJECUTADA - 1.25 Km"
+  },
+  {
+    "id": "AUD-1298",
+    "timestamp": "2026-11-18 16:30:06",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Nuevo Centro Educativo Registrado",
+    "detalle": "Registrado #260 (Liceo Bolivariano de Prueba PCEO) en Guanare (BRICOMILES) - EN EJECUCIÓN"
+  },
+  {
+    "id": "AUD-1297",
+    "timestamp": "2026-11-18 16:30:06",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Actualización Centro Educativo",
+    "detalle": "Actualizado #1 (C.E.I. GIACOPINITO): CULMINADA - 100.0%"
+  },
+  {
+    "id": "AUD-1296",
+    "timestamp": "2026-11-18 16:30:06",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Nuevo Centro de Salud Registrado",
+    "detalle": "Centro #134 'Centro Diagnóstico de Prueba PCEO' (Guanare) registrado con estatus EN PROCESO."
+  },
+  {
+    "id": "AUD-1295",
+    "timestamp": "2026-11-18 16:30:06",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Actualización Centro de Salud",
+    "detalle": "Centro #1 'ALGODONAL' actualizado a CULMINADA (100.0%)."
+  },
+  {
+    "id": "AUD-1294",
+    "timestamp": "2026-11-18 16:30:06",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA 17-11-26.xlsx procesado exitosamente (535 pozos, 462 op / 73 inop)."
+  },
+  {
+    "id": "AUD-1293",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Nueva Obra Registrada",
+    "detalle": "Nueva obra #155 (PUENTE): 'Puente Nuevo Test Unitario' en Guanare (2026). Estatus: EN DESARROLLO (25%)"
+  },
+  {
+    "id": "AUD-1292",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Actualización de Obra",
+    "detalle": "Obra #1 actualizada a estatus 'EN DESARROLLO' con avance del 95%. Notas: Avance de vigas y estribos"
+  },
+  {
+    "id": "AUD-1291",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Nuevo Registro: Luminarias",
+    "detalle": "50 Luminarias en Guanare (Barrio Libertador). Ente: Gobernación. Obs: Instalación LED."
+  },
+  {
+    "id": "AUD-1290",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Atención de Transformador Fallado",
+    "detalle": "Transformador TXF-1 marcado como atendido e instalado por Corpoelec (Fecha: 2026-11-13)."
+  },
+  {
+    "id": "AUD-1289",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Cero Huecos",
+    "accion": "Registro de Asfalto / Bacheo",
+    "detalle": "Jornada en MUNICIPIO GUANARE: 50.0 ton, 2.0 km, 38 fallas (Plan Cero Huecos). Obs: Prueba unitaria automatizada"
+  },
+  {
+    "id": "AUD-1288",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @gobernador inició sesión con perfil EJECUTIVO."
+  },
+  {
+    "id": "AUD-1287",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @analista1 inició sesión con perfil ANALISTA."
+  },
+  {
+    "id": "AUD-1286",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1285",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a INOPERATIVO (NO). Ente: Gobernación. Obs: Falla electromecánica en devanado"
+  },
+  {
+    "id": "AUD-1284",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a OPERATIVO (SI). Ente: Gobernación. Obs: Instalación de motor 25HP y bomba sumergible nueva por Gobernación de Portuguesa"
+  },
+  {
+    "id": "AUD-1283",
+    "timestamp": "2026-11-18 16:30:05",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA-8.xlsx procesado exitosamente (535 pozos, 464 op / 71 inop)."
+  },
+  {
+    "id": "AUD-1282",
+    "timestamp": "2026-11-18 16:30:04",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Plan Cero Botes",
+    "accion": "Reparación de Bote",
+    "detalle": "Bote reparado en Guanare (Barrio San José). Caudal: 0.5 L/s (43200.0 L/d). Benef: 25. Caso 1x10: SI."
+  },
+  {
+    "id": "AUD-1281",
+    "timestamp": "2026-11-18 16:18:32",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1280",
+    "timestamp": "2026-11-18 16:17:01",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "PLAN_CANALIZACION",
+    "accion": "REGISTRO_OBRA_CANALIZACION",
+    "detalle": "Obra: CANALIZACIÓN QUEBRADA TEST (Guanare) - EJECUTADA - 1.25 Km"
+  },
+  {
+    "id": "AUD-1279",
+    "timestamp": "2026-11-18 16:17:00",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Nuevo Centro Educativo Registrado",
+    "detalle": "Registrado #260 (Liceo Bolivariano de Prueba PCEO) en Guanare (BRICOMILES) - EN EJECUCIÓN"
+  },
+  {
+    "id": "AUD-1278",
+    "timestamp": "2026-11-18 16:17:00",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Actualización Centro Educativo",
+    "detalle": "Actualizado #1 (C.E.I. GIACOPINITO): CULMINADA - 100.0%"
+  },
+  {
+    "id": "AUD-1277",
+    "timestamp": "2026-11-18 16:17:00",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Nuevo Centro de Salud Registrado",
+    "detalle": "Centro #134 'Centro Diagnóstico de Prueba PCEO' (Guanare) registrado con estatus EN PROCESO."
+  },
+  {
+    "id": "AUD-1276",
+    "timestamp": "2026-11-18 16:17:00",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Actualización Centro de Salud",
+    "detalle": "Centro #1 'ALGODONAL' actualizado a CULMINADA (100.0%)."
+  },
+  {
+    "id": "AUD-1275",
+    "timestamp": "2026-11-18 16:17:00",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA 17-11-26.xlsx procesado exitosamente (535 pozos, 462 op / 73 inop)."
+  },
+  {
+    "id": "AUD-1274",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Nueva Obra Registrada",
+    "detalle": "Nueva obra #155 (PUENTE): 'Puente Nuevo Test Unitario' en Guanare (2026). Estatus: EN DESARROLLO (25%)"
+  },
+  {
+    "id": "AUD-1273",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Actualización de Obra",
+    "detalle": "Obra #1 actualizada a estatus 'EN DESARROLLO' con avance del 95%. Notas: Avance de vigas y estribos"
+  },
+  {
+    "id": "AUD-1272",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Nuevo Registro: Luminarias",
+    "detalle": "50 Luminarias en Guanare (Barrio Libertador). Ente: Gobernación. Obs: Instalación LED."
+  },
+  {
+    "id": "AUD-1271",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Atención de Transformador Fallado",
+    "detalle": "Transformador TXF-1 marcado como atendido e instalado por Corpoelec (Fecha: 2026-11-13)."
+  },
+  {
+    "id": "AUD-1270",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Cero Huecos",
+    "accion": "Registro de Asfalto / Bacheo",
+    "detalle": "Jornada en MUNICIPIO GUANARE: 50.0 ton, 2.0 km, 38 fallas (Plan Cero Huecos). Obs: Prueba unitaria automatizada"
+  },
+  {
+    "id": "AUD-1269",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @gobernador inició sesión con perfil EJECUTIVO."
+  },
+  {
+    "id": "AUD-1268",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @analista1 inició sesión con perfil ANALISTA."
+  },
+  {
+    "id": "AUD-1267",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1266",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a INOPERATIVO (NO). Ente: Gobernación. Obs: Falla electromecánica en devanado"
+  },
+  {
+    "id": "AUD-1265",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a OPERATIVO (SI). Ente: Gobernación. Obs: Instalación de motor 25HP y bomba sumergible nueva por Gobernación de Portuguesa"
+  },
+  {
+    "id": "AUD-1264",
+    "timestamp": "2026-11-18 16:16:58",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA-8.xlsx procesado exitosamente (535 pozos, 464 op / 71 inop)."
+  },
+  {
+    "id": "AUD-1263",
+    "timestamp": "2026-11-18 16:16:56",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Plan Cero Botes",
+    "accion": "Reparación de Bote",
+    "detalle": "Bote reparado en Guanare (Barrio San José). Caudal: 0.5 L/s (43200.0 L/d). Benef: 25. Caso 1x10: SI."
+  },
+  {
+    "id": "AUD-1262",
+    "timestamp": "2026-11-18 16:09:54",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "PLAN_CANALIZACION",
+    "accion": "REGISTRO_OBRA_CANALIZACION",
+    "detalle": "Obra: CANALIZACIÓN QUEBRADA TEST (Guanare) - EJECUTADA - 1.25 Km"
+  },
+  {
+    "id": "AUD-1261",
+    "timestamp": "2026-11-18 16:09:53",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Nuevo Centro Educativo Registrado",
+    "detalle": "Registrado #260 (Liceo Bolivariano de Prueba PCEO) en Guanare (BRICOMILES) - EN EJECUCIÓN"
+  },
+  {
+    "id": "AUD-1260",
+    "timestamp": "2026-11-18 16:09:53",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Actualización Centro Educativo",
+    "detalle": "Actualizado #1 (C.E.I. GIACOPINITO): CULMINADA - 100.0%"
+  },
+  {
+    "id": "AUD-1259",
+    "timestamp": "2026-11-18 16:09:53",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Nuevo Centro de Salud Registrado",
+    "detalle": "Centro #134 'Centro Diagnóstico de Prueba PCEO' (Guanare) registrado con estatus EN PROCESO."
+  },
+  {
+    "id": "AUD-1258",
+    "timestamp": "2026-11-18 16:09:53",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Actualización Centro de Salud",
+    "detalle": "Centro #1 'ALGODONAL' actualizado a CULMINADA (100.0%)."
+  },
+  {
+    "id": "AUD-1257",
+    "timestamp": "2026-11-18 16:09:53",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA 17-11-26.xlsx procesado exitosamente (535 pozos, 462 op / 73 inop)."
+  },
+  {
+    "id": "AUD-1256",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Nueva Obra Registrada",
+    "detalle": "Nueva obra #155 (PUENTE): 'Puente Nuevo Test Unitario' en Guanare (2026). Estatus: EN DESARROLLO (25%)"
+  },
+  {
+    "id": "AUD-1255",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Actualización de Obra",
+    "detalle": "Obra #1 actualizada a estatus 'EN DESARROLLO' con avance del 95%. Notas: Avance de vigas y estribos"
+  },
+  {
+    "id": "AUD-1254",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Nuevo Registro: Luminarias",
+    "detalle": "50 Luminarias en Guanare (Barrio Libertador). Ente: Gobernación. Obs: Instalación LED."
+  },
+  {
+    "id": "AUD-1253",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Atención de Transformador Fallado",
+    "detalle": "Transformador TXF-1 marcado como atendido e instalado por Corpoelec (Fecha: 2026-11-13)."
+  },
+  {
+    "id": "AUD-1252",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Cero Huecos",
+    "accion": "Registro de Asfalto / Bacheo",
+    "detalle": "Jornada en MUNICIPIO GUANARE: 50.0 ton, 2.0 km, 38 fallas (Plan Cero Huecos). Obs: Prueba unitaria automatizada"
+  },
+  {
+    "id": "AUD-1251",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @gobernador inició sesión con perfil EJECUTIVO."
+  },
+  {
+    "id": "AUD-1250",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @analista1 inició sesión con perfil ANALISTA."
+  },
+  {
+    "id": "AUD-1249",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1248",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a INOPERATIVO (NO). Ente: Gobernación. Obs: Falla electromecánica en devanado"
+  },
+  {
+    "id": "AUD-1247",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a OPERATIVO (SI). Ente: Gobernación. Obs: Instalación de motor 25HP y bomba sumergible nueva por Gobernación de Portuguesa"
+  },
+  {
+    "id": "AUD-1246",
+    "timestamp": "2026-11-18 16:09:51",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA-8.xlsx procesado exitosamente (535 pozos, 464 op / 71 inop)."
+  },
+  {
+    "id": "AUD-1245",
+    "timestamp": "2026-11-18 16:09:49",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Plan Cero Botes",
+    "accion": "Reparación de Bote",
+    "detalle": "Bote reparado en Guanare (Barrio San José). Caudal: 0.5 L/s (43200.0 L/d). Benef: 25. Caso 1x10: SI."
+  },
+  {
+    "id": "AUD-1244",
+    "timestamp": "2026-11-18 15:59:28",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1243",
+    "timestamp": "2026-11-18 15:55:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "PLAN_CANALIZACION",
+    "accion": "REGISTRO_OBRA_CANALIZACION",
+    "detalle": "Obra: CANALIZACIÓN QUEBRADA TEST (Guanare) - EJECUTADA - 1.25 Km"
+  },
+  {
+    "id": "AUD-1242",
+    "timestamp": "2026-11-18 15:55:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Nuevo Centro Educativo Registrado",
+    "detalle": "Registrado #260 (Liceo Bolivariano de Prueba PCEO) en Guanare (BRICOMILES) - EN EJECUCIÓN"
+  },
+  {
+    "id": "AUD-1241",
+    "timestamp": "2026-11-18 15:55:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Actualización Centro Educativo",
+    "detalle": "Actualizado #1 (C.E.I. GIACOPINITO): CULMINADA - 100.0%"
+  },
+  {
+    "id": "AUD-1240",
+    "timestamp": "2026-11-18 15:55:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Nuevo Centro de Salud Registrado",
+    "detalle": "Centro #134 'Centro Diagnóstico de Prueba PCEO' (Guanare) registrado con estatus EN PROCESO."
+  },
+  {
+    "id": "AUD-1239",
+    "timestamp": "2026-11-18 15:55:58",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Actualización Centro de Salud",
+    "detalle": "Centro #1 'ALGODONAL' actualizado a CULMINADA (100.0%)."
+  },
+  {
+    "id": "AUD-1238",
+    "timestamp": "2026-11-18 15:55:57",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA 17-11-26.xlsx procesado exitosamente (535 pozos, 462 op / 73 inop)."
+  },
+  {
+    "id": "AUD-1237",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Nueva Obra Registrada",
+    "detalle": "Nueva obra #155 (PUENTE): 'Puente Nuevo Test Unitario' en Guanare (2026). Estatus: EN DESARROLLO (25%)"
+  },
+  {
+    "id": "AUD-1236",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Actualización de Obra",
+    "detalle": "Obra #1 actualizada a estatus 'EN DESARROLLO' con avance del 95%. Notas: Avance de vigas y estribos"
+  },
+  {
+    "id": "AUD-1235",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Nuevo Registro: Luminarias",
+    "detalle": "50 Luminarias en Guanare (Barrio Libertador). Ente: Gobernación. Obs: Instalación LED."
+  },
+  {
+    "id": "AUD-1234",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Atención de Transformador Fallado",
+    "detalle": "Transformador TXF-1 marcado como atendido e instalado por Corpoelec (Fecha: 2026-11-13)."
+  },
+  {
+    "id": "AUD-1233",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Cero Huecos",
+    "accion": "Registro de Asfalto / Bacheo",
+    "detalle": "Jornada en MUNICIPIO GUANARE: 50.0 ton, 2.0 km, 38 fallas (Plan Cero Huecos). Obs: Prueba unitaria automatizada"
+  },
+  {
+    "id": "AUD-1232",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @gobernador inició sesión con perfil EJECUTIVO."
+  },
+  {
+    "id": "AUD-1231",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @analista1 inició sesión con perfil ANALISTA."
+  },
+  {
+    "id": "AUD-1230",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1229",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a INOPERATIVO (NO). Ente: Gobernación. Obs: Falla electromecánica en devanado"
+  },
+  {
+    "id": "AUD-1228",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a OPERATIVO (SI). Ente: Gobernación. Obs: Instalación de motor 25HP y bomba sumergible nueva por Gobernación de Portuguesa"
+  },
+  {
+    "id": "AUD-1227",
+    "timestamp": "2026-11-18 15:55:55",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA-8.xlsx procesado exitosamente (535 pozos, 464 op / 71 inop)."
+  },
+  {
+    "id": "AUD-1226",
+    "timestamp": "2026-11-18 15:55:54",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Plan Cero Botes",
+    "accion": "Reparación de Bote",
+    "detalle": "Bote reparado en Guanare (Barrio San José). Caudal: 0.5 L/s (43200.0 L/d). Benef: 25. Caso 1x10: SI."
+  },
+  {
+    "id": "AUD-1225",
+    "timestamp": "2026-11-18 15:55:26",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Nuevo Centro Educativo Registrado",
+    "detalle": "Registrado #260 (Liceo Bolivariano de Prueba PCEO) en Guanare (BRICOMILES) - EN EJECUCIÓN"
+  },
+  {
+    "id": "AUD-1224",
+    "timestamp": "2026-11-18 15:55:26",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Actualización Centro Educativo",
+    "detalle": "Actualizado #1 (C.E.I. GIACOPINITO): CULMINADA - 100.0%"
+  },
+  {
+    "id": "AUD-1223",
+    "timestamp": "2026-11-18 15:55:26",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Nuevo Centro de Salud Registrado",
+    "detalle": "Centro #134 'Centro Diagnóstico de Prueba PCEO' (Guanare) registrado con estatus EN PROCESO."
+  },
+  {
+    "id": "AUD-1222",
+    "timestamp": "2026-11-18 15:55:26",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Actualización Centro de Salud",
+    "detalle": "Centro #1 'ALGODONAL' actualizado a CULMINADA (100.0%)."
+  },
+  {
+    "id": "AUD-1221",
+    "timestamp": "2026-11-18 15:55:26",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA 17-11-26.xlsx procesado exitosamente (535 pozos, 462 op / 73 inop)."
+  },
+  {
+    "id": "AUD-1220",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Nueva Obra Registrada",
+    "detalle": "Nueva obra #155 (PUENTE): 'Puente Nuevo Test Unitario' en Guanare (2026). Estatus: EN DESARROLLO (25%)"
+  },
+  {
+    "id": "AUD-1219",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Actualización de Obra",
+    "detalle": "Obra #1 actualizada a estatus 'EN DESARROLLO' con avance del 95%. Notas: Avance de vigas y estribos"
+  },
+  {
+    "id": "AUD-1218",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Nuevo Registro: Luminarias",
+    "detalle": "50 Luminarias en Guanare (Barrio Libertador). Ente: Gobernación. Obs: Instalación LED."
+  },
+  {
+    "id": "AUD-1217",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Atención de Transformador Fallado",
+    "detalle": "Transformador TXF-1 marcado como atendido e instalado por Corpoelec (Fecha: 2026-11-13)."
+  },
+  {
+    "id": "AUD-1216",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Cero Huecos",
+    "accion": "Registro de Asfalto / Bacheo",
+    "detalle": "Jornada en MUNICIPIO GUANARE: 50.0 ton, 2.0 km, 38 fallas (Plan Cero Huecos). Obs: Prueba unitaria automatizada"
+  },
+  {
+    "id": "AUD-1215",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @gobernador inició sesión con perfil EJECUTIVO."
+  },
+  {
+    "id": "AUD-1214",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @analista1 inició sesión con perfil ANALISTA."
+  },
+  {
+    "id": "AUD-1213",
+    "timestamp": "2026-11-18 15:55:24",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1212",
+    "timestamp": "2026-11-18 15:55:23",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a INOPERATIVO (NO). Ente: Gobernación. Obs: Falla electromecánica en devanado"
+  },
+  {
+    "id": "AUD-1211",
+    "timestamp": "2026-11-18 15:55:23",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a OPERATIVO (SI). Ente: Gobernación. Obs: Instalación de motor 25HP y bomba sumergible nueva por Gobernación de Portuguesa"
+  },
+  {
+    "id": "AUD-1210",
+    "timestamp": "2026-11-18 15:55:23",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA-8.xlsx procesado exitosamente (535 pozos, 464 op / 71 inop)."
+  },
+  {
+    "id": "AUD-1209",
+    "timestamp": "2026-11-18 15:55:22",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Plan Cero Botes",
+    "accion": "Reparación de Bote",
+    "detalle": "Bote reparado en Guanare (Barrio San José). Caudal: 0.5 L/s (43200.0 L/d). Benef: 25. Caso 1x10: SI."
+  },
+  {
+    "id": "AUD-1208",
+    "timestamp": "2026-11-18 15:48:07",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1207",
+    "timestamp": "2026-11-18 15:47:05",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1206",
+    "timestamp": "2026-11-18 15:46:20",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "PLAN_CANALIZACION",
+    "accion": "REGISTRO_OBRA_CANALIZACION",
+    "detalle": "Obra: CANALIZACIÓN QUEBRADA TEST (Guanare) - EJECUTADA - 1.25 Km"
+  },
+  {
+    "id": "AUD-1205",
+    "timestamp": "2026-11-18 15:46:20",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Nuevo Centro Educativo Registrado",
+    "detalle": "Registrado #260 (Liceo Bolivariano de Prueba PCEO) en Guanare (BRICOMILES) - EN EJECUCIÓN"
+  },
+  {
+    "id": "AUD-1204",
+    "timestamp": "2026-11-18 15:46:20",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Centros Educativos",
+    "accion": "Actualización Centro Educativo",
+    "detalle": "Actualizado #1 (C.E.I. GIACOPINITO): CULMINADA - 100.0%"
+  },
+  {
+    "id": "AUD-1203",
+    "timestamp": "2026-11-18 15:46:19",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Nuevo Centro de Salud Registrado",
+    "detalle": "Centro #134 'Centro Diagnóstico de Prueba PCEO' (Guanare) registrado con estatus EN PROCESO."
+  },
+  {
+    "id": "AUD-1202",
+    "timestamp": "2026-11-18 15:46:19",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Espacios de Salud",
+    "accion": "Actualización Centro de Salud",
+    "detalle": "Centro #1 'ALGODONAL' actualizado a CULMINADA (100.0%)."
+  },
+  {
+    "id": "AUD-1201",
+    "timestamp": "2026-11-18 15:46:19",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA 17-11-26.xlsx procesado exitosamente (535 pozos, 462 op / 73 inop)."
+  },
+  {
+    "id": "AUD-1200",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Nueva Obra Registrada",
+    "detalle": "Nueva obra #155 (PUENTE): 'Puente Nuevo Test Unitario' en Guanare (2026). Estatus: EN DESARROLLO (25%)"
+  },
+  {
+    "id": "AUD-1199",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Puentes",
+    "accion": "Actualización de Obra",
+    "detalle": "Obra #1 actualizada a estatus 'EN DESARROLLO' con avance del 95%. Notas: Avance de vigas y estribos"
+  },
+  {
+    "id": "AUD-1198",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Nuevo Registro: Luminarias",
+    "detalle": "50 Luminarias en Guanare (Barrio Libertador). Ente: Gobernación. Obs: Instalación LED."
+  },
+  {
+    "id": "AUD-1197",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Fiesta de la Luz",
+    "accion": "Atención de Transformador Fallado",
+    "detalle": "Transformador TXF-1 marcado como atendido e instalado por Corpoelec (Fecha: 2026-11-13)."
+  },
+  {
+    "id": "AUD-1196",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Plan Cero Huecos",
+    "accion": "Registro de Asfalto / Bacheo",
+    "detalle": "Jornada en MUNICIPIO GUANARE: 50.0 ton, 2.0 km, 38 fallas (Plan Cero Huecos). Obs: Prueba unitaria automatizada"
+  },
+  {
+    "id": "AUD-1195",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "gobernador",
+    "nombre": "Gobernador del Estado - Antonio Primitivo Cedeño",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @gobernador inició sesión con perfil EJECUTIVO."
+  },
+  {
+    "id": "AUD-1194",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "analista1",
+    "nombre": "María Romero - DESPACHO PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @analista1 inició sesión con perfil ANALISTA."
+  },
+  {
+    "id": "AUD-1193",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "master1",
+    "nombre": "Manuel Hidalgo — Coordinación PCEO",
+    "modulo": "Autenticación",
+    "accion": "Inicio de Sesión",
+    "detalle": "Usuario @master1 inició sesión con perfil MASTER."
+  },
+  {
+    "id": "AUD-1192",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a INOPERATIVO (NO). Ente: Gobernación. Obs: Falla electromecánica en devanado"
+  },
+  {
+    "id": "AUD-1191",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Cambio de Estatus",
+    "detalle": "Pozo #135 (POR040001H - SECTOR LOS CANALES) pasó a OPERATIVO (SI). Ente: Gobernación. Obs: Instalación de motor 25HP y bomba sumergible nueva por Gobernación de Portuguesa"
+  },
+  {
+    "id": "AUD-1190",
+    "timestamp": "2026-11-18 15:46:18",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Fiesta del Agua",
+    "accion": "Importación Excel HIDROVEN",
+    "detalle": "Archivo OPERATIVIDAD  PORTUGUESA-8.xlsx procesado exitosamente (535 pozos, 464 op / 71 inop)."
+  },
+  {
+    "id": "AUD-1189",
+    "timestamp": "2026-11-18 15:46:17",
+    "username": "master1",
+    "nombre": "Usuario Conectado",
+    "modulo": "Plan Cero Botes",
+    "accion": "Reparación de Bote",
+    "detalle": "Bote reparado en Guanare (Barrio San José). Caudal: 0.5 L/s (43200.0 L/d). Benef: 25. Caso 1x10: SI."
+  },
+  {
     "id": "AUD-1188",
     "timestamp": "2026-11-18 14:38:39",
     "username": "master1",

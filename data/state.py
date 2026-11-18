@@ -60,6 +60,17 @@ def normalize_name(text: str) -> str:
         return ""
     return "".join(c for c in unicodedata.normalize("NFD", str(text)) if unicodedata.category(c) != "Mn").lower().strip()
 
+class AuthBool(int):
+    """Booleano dinámico compatible con acceso directo (bool) y llamada como método callable."""
+    def __new__(cls, val: bool = False):
+        return super().__new__(cls, 1 if val else 0)
+
+    def __call__(self) -> bool:
+        return bool(self)
+
+    def __bool__(self) -> bool:
+        return super().__bool__()
+
 class AppState:
     _instance = None
 
@@ -72,10 +83,9 @@ class AppState:
     def _init_state(self):
         self.current_user: Optional[Dict] = None
         self.current_role: str = "MASTER"
+        self._is_authenticated: bool = False
         self.selected_municipality: str = "Todos los Municipios"
         self.active_tab_index: int = 0
-        self.is_dark_mode: bool = True
-        self.theme_change_listeners: List[Callable] = []
         
         # Copias mutables de los datos de trabajo
         self.municipality_stats: Dict[str, Dict[str, int]] = copy.deepcopy(MUNICIPALITY_STATS)
@@ -278,9 +288,21 @@ class AppState:
             except Exception as e:
                 print(f"Error invocando callback de estado: {e}")
 
+    @property
+    def is_authenticated(self) -> AuthBool:
+        """Indica si existe una sesión activa y validada con credenciales oficiales.
+        Funciona como propiedad booleana (state.is_authenticated) y método (state.is_authenticated())."""
+        val = bool(getattr(self, "_is_authenticated", False) and self.current_user is not None and self.current_user.get("username"))
+        return AuthBool(val)
+
+    @is_authenticated.setter
+    def is_authenticated(self, value: bool):
+        self._is_authenticated = bool(value)
+
     def login_user(self, user_dict: Dict):
         self.current_user = user_dict
-        self.current_role = user_dict.get("rol", "ANALISTA")
+        self._is_authenticated = True
+        self.current_role = user_dict.get("rol", "EJECUTIVO").upper()
         self.notify_listeners()
         self.log_audit(
             modulo="Autenticación",
@@ -296,6 +318,7 @@ class AppState:
                 detalle=f"Usuario @{self.current_user.get('username')} cerró sesión."
             )
         self.current_user = None
+        self._is_authenticated = False
         self.current_role = "EJECUTIVO"
         self.notify_listeners()
 
@@ -312,26 +335,6 @@ class AppState:
     def set_role(self, role: str):
         self.current_role = role
         self.notify_listeners()
-
-    def set_theme(self, is_dark: bool):
-        """Establece directamente el modo de tema de forma atómica e instantánea sin recursión."""
-        if hasattr(self, "is_dark_mode") and self.is_dark_mode == is_dark:
-            return  # Guardia contra re-entrancia y recursión
-        self.is_dark_mode = is_dark
-        try:
-            from components.theme import set_theme_mode
-            set_theme_mode(self.is_dark_mode)
-        except Exception as e:
-            print(f"Aviso al configurar tema: {e}")
-        for listener in list(self.theme_change_listeners):
-            try:
-                listener(self.is_dark_mode)
-            except Exception as e:
-                print(f"Error en listener de tema: {e}")
-
-    def toggle_theme(self):
-        """Alterna entre Modo Oscuro Ejecutivo y Modo Claro Institucional."""
-        self.set_theme(not self.is_dark_mode)
 
     def is_master(self) -> bool:
         return self.current_role in ("MASTER", "master")

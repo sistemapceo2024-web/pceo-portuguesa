@@ -108,6 +108,7 @@ def build_login_view(page: ft.Page, on_login_success) -> ft.Control:
             error_container.visible = False
             password_field.value = ""
             state.login_user(user)
+            state.is_authenticated = True
             on_login_success()
         else:
             error_text.value = msg or "Credenciales inválidas. Verifique su usuario y contraseña."
