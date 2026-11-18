@@ -18,8 +18,7 @@ from components.theme import (
     COLOR_STATUS_GREEN,
     COLOR_STATUS_AMBER,
     COLOR_STATUS_RED,
-    get_status_colors,
-    is_dark_mode
+    get_status_colors
 )
 from components.semaphore import create_semaphore_badge
 from data.models import GovernmentPlan
@@ -70,7 +69,7 @@ def create_plan_kpi_card(plan: GovernmentPlan, on_click=None) -> ft.Container:
             padding=ft.Padding.symmetric(horizontal=10, vertical=6),
             bgcolor=COLOR_SURFACE_ELEVATED,
             border_radius=8,
-            border=ft.Border.all(1, "#1E3A8A" if is_dark_mode() else "#BFDBFE")
+            border=ft.Border.all(1, "#BFDBFE")
         )
 
     card_content = ft.Column(
@@ -173,7 +172,7 @@ def create_plan_kpi_card(plan: GovernmentPlan, on_click=None) -> ft.Container:
                     ]
                 ),
                 padding=ft.Padding.symmetric(vertical=10, horizontal=8),
-                bgcolor="#0B1528" if is_dark_mode() else "#F8FAFC",
+                bgcolor="#F8FAFC",
                 border_radius=8,
                 border=ft.Border.all(1, COLOR_BORDER)
             ),
@@ -192,7 +191,7 @@ def create_plan_kpi_card(plan: GovernmentPlan, on_click=None) -> ft.Container:
                     ft.ProgressBar(
                         value=plan.progress,
                         color=status_colors["text"],
-                        bgcolor="#1E293B" if is_dark_mode() else "#E2E8F0",
+                        bgcolor="#E2E8F0",
                         border_radius=4
                     )
                 ]
@@ -218,7 +217,7 @@ def create_plan_kpi_card(plan: GovernmentPlan, on_click=None) -> ft.Container:
         shadow=ft.BoxShadow(
             spread_radius=0,
             blur_radius=12,
-            color="#30000000" if is_dark_mode() else "#0A0A192F",
+            color="#0A0A192F",
             offset=ft.Offset(0, 4)
         ),
         animate=ft.Animation(150, ft.AnimationCurve.EASE_IN_OUT),

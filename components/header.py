@@ -9,9 +9,7 @@ from components.theme import (
     COLOR_ELECTRIC_BLUE,
     COLOR_SURFACE_WHITE,
     COLOR_STATUS_GREEN,
-    COLOR_STATUS_AMBER,
-    create_theme_toggle_switch,
-    is_dark_mode
+    COLOR_STATUS_AMBER
 )
 from data.models import ROLE_EDITOR, ROLE_VIEWER
 
@@ -141,12 +139,6 @@ def create_institutional_header(
         )
 
     right_controls = []
-    
-    # Interruptor de Tema permanente (Modo Claro / Modo Oscuro con Sol y Luna)
-    if on_theme_toggle:
-        right_controls.append(create_theme_toggle_switch(on_theme_toggle, is_dark=is_dark_mode()))
-    else:
-        right_controls.append(create_theme_toggle_switch(lambda is_dark: state.set_theme(is_dark), is_dark=is_dark_mode()))
 
     if show_user_chip or on_logout_click or on_switch_role_click:
         right_controls.append(role_chip)
